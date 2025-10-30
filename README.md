@@ -6,7 +6,6 @@ This project features secure, separate interfaces for both regular **Customers**
 
 ## 📸 Screenshots
 
-(Add your own screenshots to these placeholders!)
 
 | Login Page | Customer Dashboard | Admin Rental History |
 | :---: | :---: | :---: |
@@ -118,8 +117,9 @@ A big thanks to everyone who contributed to this project.
 
 | Name | GitHub | Role |
 | :--- | :--- | :--- |
-| **[Your Name]** | `[@your-github-username]` | Lead Developer |
-| [Contributor 2] | `[@github-user]` | [Role] |
-| [Contributor 3] | `[@github-user]` | [Role] |
+| **[Kevin P Tom]** | `[@kevinptom]` | Lead Developer |
+| [Kevin Joseph] | `[@kevin-creater]` | [Frontend Developer] |
+| [Savio Bijo Thomas] | `[@savio-bijo-thomas]` | [Backend Developer] |
+| [Pace Petson] | '[@github] | [Frontend Developer] |
 
 
