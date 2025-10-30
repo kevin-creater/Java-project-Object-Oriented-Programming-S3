@@ -30,7 +30,7 @@ A quick look at the application's interface.
 
 | Login Page | Main Dashboard | Rental History |
 | :---: | :---: | :---: |
-| ![Login Screen](images/login.png) | ![Main App Screen](images/login.png) | ![History Screen](images/.png) |
+| ![Login Screen](MovieRentalSystem/images/login.png) | ![Main App Screen](images/login.png) | ![History Screen](images/.png) |
 
 *(**Pro-tip:** Take screenshots and place them in an `images` folder in your repository, then update the paths above!)*
 
