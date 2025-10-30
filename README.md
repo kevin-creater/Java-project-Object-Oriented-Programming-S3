@@ -1,118 +1,125 @@
-# 🍿 Java Movie Rental System 🎬
+# 🍿 Movie Rental System
 
-A complete desktop movie rental application built with Java. This project uses Java Swing for the UI, MySQL for database management, and a 3-tier (MVC) architecture.
+Welcome to the Movie Rental System! This is a complete desktop application built with Java Swing that simulates a real-world video rental store. It features a clean, user-friendly interface and a robust backend powered by a MySQL database.
 
-![Java](https://img.shields.io/badge/Java-11%2B-ED8B00?style=for-the-badge&logo=java)
-![MySQL](https://img.shields.io/badge/MySQL-8.0-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
-![Swing](https://img.shields.io/badge/Java_Swing-UI-30A96B?style=for-the-badge&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAARVJREFUOE/Fk79qg0AYxV/fE1EYBGmNIoJXiCAKDsEmdPBKxJ1bB1dx8gIuHkUHx2JwcAmiYxG8gj25gIuVUqCIH+3y5l2WOfN933c/DBCSn7yP51EwzT8XElL+FwBqGgYdF8B+BVCG8S/sRqAAYBfABwBfAHYAnAA4ANTQePPECbQBgA/gNwGgBwB+gHMBVIBWq0G73QYgGo2K8Hw+h8PhwNPpBDabDcZisHAY/+u+728gCGJxnhcMBoNKpRLS6TSKoxhmj/sC+Ww2GyQSiSgWi6B/gL/cH9VqFeB0OiEUCkGlUoHT6QRarRYymQx2u100Gg18Pt/mD+B1YV0Vw+l0QlEUoVqtorquQBAEVFUVz/O0Wq1im7ZtMxuBOQFf3mHwG8/DUAAAAABJRU5ErkJggg==)
-
----
-
-## ✨ Features
-
-* **Secure Authentication:** Separate login and registration for **Customers** and **Admins**.
-* **Admin Dashboard:**
-    * View all rentals from all users.
-    * Add new movies to the database, including title, genre, rating, and image path.
-* **Customer Dashboard:**
-    * Browse and search for movies by title, director, or genre.
-    * View movie details in a clean card layout, including cover images.
-    * Rent movies (status changes to 'RENTED').
-    * View personal rental history ("My Rentals").
-    * Return movies (status changes to 'AVAILABLE').
-* **Robust Backend:** Transactional SQL queries ensure that renting a movie correctly updates both the `rentals` and `movies` tables.
-
----
+This project features secure, separate interfaces for both regular **Customers** and system **Administrators**, each with different permissions and capabilities. It is built using the **Model-View-Controller (MVC)** design pattern to ensure clean, scalable, and maintainable code.
 
 ## 📸 Screenshots
 
-A quick look at the application's interface.
+(Add your own screenshots to these placeholders!)
 
-| Login Page | Main Dashboard | Rental History |
+| Login Page | Customer Dashboard | Admin Rental History |
 | :---: | :---: | :---: |
-| ![Login Screen](MovieRentalSystem/images/login.png) | ![Main App Screen](images/login.png) | ![History Screen](images/.png) |
+| ![Login Page](screenshots/login.png) | ![Customer Dashboard](screenshots/dashboard.png) | ![Admin History](screenshots/admin_history.png) |
 
-*(**Pro-tip:** Take screenshots and place them in an `images` folder in your repository, then update the paths above!)*
+## ✨ Features
 
----
+* **Secure Authentication:** Separate login and registration system for Customers and Admins.
+* **Movie Catalog:** Browse the full movie catalog with images, ratings, genres, and prices.
+* **Search Functionality:** Instantly search the catalog by title, director, or genre.
+* **Customer Portal:**
+    * Rent available movies.
+    * View personal rental history (active and returned).
+    * Return movies to make them available again.
+* **Admin Portal:**
+    * **Add Movies:** Easily add new movies, including poster images, to the system.
+    * **View All Transactions:** Monitor all rentals and returns from all users.
 
-## 🚀 How to Run
+## 🛠️ Tech Stack
 
-### 1. Database Setup
-1.  Make sure you have a **MySQL** server running.
-2.  Open your MySQL client (like Workbench) and run the `schema.sql` file provided in this repository. (If you don't have one, **use the script below**).
-3.  This will create the `movie_rental_system` database and all required tables.
-4.  **Important:** Edit `db/DatabaseConnection.java` to match your local MySQL username and password.
+![Java](https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 
-### 2. Project Setup
-1.  **Clone** this repository.
-2.  **Add the MySQL JDBC Driver:** Download the `mysql-connector-j-X.X.XX.jar` file and add it to your project's build path in your IDE (Eclipse, IntelliJ, etc.).
-3.  **Image Folder:** Create an `images` folder in the root of the project. Add a `default_movie.png` file to it.
+* **Frontend:** **Java Swing** (GUI)
+* **Backend:** Java (JDK 11+)
+* **Database:** MySQL
+* **Driver:** MySQL Connector/J (JDBC)
+* **Architecture:** Model-View-Controller (MVC)
 
-### 3. Run
-* Find and run the `main()` method in **`UI/LoginPage.java`**.
+## 🚀 Getting Started
 
-### Default Admin Login
-* **Username:** `admin`
-* **Password:** `admin123`
+To get a local copy up and running, follow these simple steps.
 
----
+### Prerequisites
 
-## 📋 SQL Schema
+You will need the following software installed on your machine:
+* [Java JDK 11](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html) or newer
+* [MySQL Server](https://dev.mysql.com/downloads/mysql/)
+* An IDE (like [Eclipse](https://www.eclipse.org/) or [IntelliJ IDEA](https://www.jetbrains.com/idea/))
 
-Use this script to set up your database if you're starting fresh.
+### Installation
 
-```sql
--- Create the database
-CREATE DATABASE IF NOT EXISTS movie_rental_system;
-USE movie_rental_system;
+1.  **Clone the repo**
+    ```sh
+    git clone [https://github.com/](https://github.com/)[kevinptom]/[Java-project-Object-Oriented-Programming-S3].git
+    ```
 
--- Create the users table
-CREATE TABLE IF NOT EXISTS users (
-    user_id INT AUTO_INCREMENT PRIMARY KEY,
-    username VARCHAR(50) NOT NULL UNIQUE,
-    password VARCHAR(255) NOT NULL,
-    name VARCHAR(100),
-    email VARCHAR(100) UNIQUE,
-    phone VARCHAR(15),
-    user_type VARCHAR(20) NOT NULL DEFAULT 'CUSTOMER'
-);
+2.  **Database Setup**
+    * Start your MySQL server.
+    * Create a new database named `movie_rental_system`.
+    * **Important:** You must **export your local database schema** into an `.sql` file (e.g., `database.sql`) and add it to the repository. Then, import this file into your new `movie_rental_system` database to create all the tables (`movies`, `users`, `rentals`).
 
--- Create the movies table
-CREATE TABLE IF NOT EXISTS movies (
-    movie_id INT AUTO_INCREMENT PRIMARY KEY,
-    title VARCHAR(255) NOT NULL,
-    director VARCHAR(100),
-    genre VARCHAR(50),
-    release_year INT,
-    duration INT,
-    status VARCHAR(20) DEFAULT 'AVAILABLE',
-    rental_price DOUBLE,
-    rating DOUBLE,
-    image_path VARCHAR(255) DEFAULT 'default_movie.png'
-);
+3.  **Configure Database Connection**
+    * Open the project in your IDE.
+    * Navigate to `src/model/DatabaseConnection.java`.
+    * Update the `USERNAME` and `PASSWORD` constants to match your local MySQL credentials.
+    ```java
+    // src/model/DatabaseConnection.java
+    
+    private static final String URL = "jdbc:mysql://localhost:3306/movie_rental_system";
+    private static final String USERNAME = "root"; // Your MySQL username
+    private static final String PASSWORD = "your_password"; // Your MySQL password
+    ```
 
--- Create the rentals table
-CREATE TABLE IF NOT EXISTS rentals (
-    rental_id INT AUTO_INCREMENT PRIMARY KEY,
-    movie_id INT,
-    user_id INT,
-    rental_date DATETIME,
-    due_date DATETIME,
-    return_date DATETIME,
-    total_amount DOUBLE,
-    status VARCHAR(20),
-    FOREIGN KEY (movie_id) REFERENCES movies(movie_id),
-    FOREIGN KEY (user_id) REFERENCES users(user_id)
-);
+4.  **Add Image Assets**
+    * In the root directory of the project, create a new folder named `images`.
+    * Add all your movie poster `.jpg` or `.png` files into this folder.
+    * **Crucial:** You must add a file named `default_movie.png` to this folder. It will be used as a fallback if a specific movie's poster is not found.
 
--- Create a default ADMIN user
-INSERT IGNORE INTO users (username, password, name, email, phone, user_type)
-VALUES ('admin', 'admin123', 'Admin User', 'admin@app.com', '1234567890', 'ADMIN');
+5.  **Run the Application**
+    * Compile the project.
+    * Run the `src/view/LoginPage.java` file to start the application.
 
--- Add a sample movie
-INSERT IGNORE INTO movies (title, director, genre, release_year, duration, status, rental_price, rating, image_path)
-VALUES ('The Shawshank Redemption', 'Frank Darabont', 'Drama', 1994, 142, 'AVAILABLE', 3.99, 5.0, 'default_movie.png'),
-       ('The Godfather', 'Francis Ford Coppola', 'Crime', 1972, 175, 'AVAILABLE', 4.50, 4.9, 'default_movie.png'),
-       ('The Dark Knight', 'Christopher Nolan', 'Action', 2008, 152, 'AVAILABLE', 4.99, 4.8, 'default_movie.png');
+## 🧑‍💻 How to Use
+
+1.  **Admin:** Log in using the 'ADMIN' role. (You may need to manually add an admin user to your `users` table first). You can now add movies and view all rentals.
+2.  **Customer:** Register a new 'CUSTOMER' account from the login page.
+3.  **Browse & Rent:** Log in as the customer, browse the movie list, and click "Rent Movie" on any available title.
+4.  **View & Return:** Go to "View My Rentals" to see your rental history. You can select an "ACTIVE" rental and click "Return Selected Movie."
+
+## 📁 Project Structure
+
+This project follows the MVC design pattern:
+
 ```
+src/
+├── controller/   // Handles logic between View and Model
+│   ├── MovieController.java
+│   ├── RentalController.java
+│   └── UserController.java
+├── model/        // Data, Business Logic, and Database
+│   ├── Movie.java
+│   ├── Rental.java
+│   ├── User.java
+│   ├── MovieDAO.java
+│   ├── RentalDAO.java
+│   ├── UserDAO.java
+│   └── DatabaseConnection.java
+└── view/         // All GUI components (JFrames, JDialogs)
+    ├── LoginPage.java
+    ├── MainApp.java
+    ├── RegistrationDialog.java
+    └── RentalHistoryDialog.java
+```
+
+## 👥 Contributors
+
+A big thanks to everyone who contributed to this project.
+
+| Name | GitHub | Role |
+| :--- | :--- | :--- |
+| **[Your Name]** | `[@your-github-username]` | Lead Developer |
+| [Contributor 2] | `[@github-user]` | [Role] |
+| [Contributor 3] | `[@github-user]` | [Role] |
+
+
