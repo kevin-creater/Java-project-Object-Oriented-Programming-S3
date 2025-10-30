@@ -51,7 +51,7 @@ You will need the following software installed on your machine:
 
 1.  **Clone the repo**
     ```sh
-    git clone [https://github.com/](https://github.com/)[kevinptom]/[Java-project-Object-Oriented-Programming-S3].git
+    https://github.com/kevinptom/Java-project-Object-Oriented-Programming-S3.git
     ```
 
 2.  **Database Setup**
