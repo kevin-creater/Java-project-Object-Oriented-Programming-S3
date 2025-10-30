@@ -10,7 +10,7 @@ This project features secure, separate interfaces for both regular **Customers**
 
 | Login Page | Customer Dashboard | Admin Rental History |
 | :---: | :---: | :---: |
-| ![Login Page](Movie_Rental/images/login.png) | ![Customer Dashboard](Movie_Rental/images/customerDashboard.png) | ![Admin History](screenshots/admin_history.png) |
+| ![Login Page](Movie_Rental/images/login.png) | ![Customer Dashboard](Movie_Rental/images/customerDashboard.png) | ![Admin History](Movie_Rental/images/admin_history.png) |
 
 ## ✨ Features
 
