@@ -10,7 +10,7 @@ public class Movie {
     private String status;
     private double rentalPrice;
     private double rating;
-    private String imagePath; // <-- HERE IS THE NEW FIELD
+    private String imagePath; 
 
     // Updated constructor
     public Movie(int movieId, String title, String director, String genre, 
@@ -24,7 +24,7 @@ public class Movie {
         this.status = status;
         this.rentalPrice = rentalPrice;
         this.rating = rating;
-        this.imagePath = imagePath; // <-- INITIALIZE IT
+        this.imagePath = imagePath; 
     }
 
     // Default constructor for 'addMovie'
@@ -42,7 +42,7 @@ public class Movie {
     public String getStatus() { return status; }
     public double getRentalPrice() { return rentalPrice; }
     public double getRating() { return rating; }
-    public String getImagePath() { return imagePath; } // <-- HERE IS THE NEW GETTER
+    public String getImagePath() { return imagePath; } 
 
     // --- Setters ---
     public void setMovieId(int movieId) { this.movieId = movieId; }
@@ -54,7 +54,7 @@ public class Movie {
     public void setStatus(String status) { this.status = status; }
     public void setRentalPrice(double rentalPrice) { this.rentalPrice = rentalPrice; }
     public void setRating(double rating) { this.rating = rating; }
-    public void setImagePath(String imagePath) { this.imagePath = imagePath; } // <-- HERE IS THE NEW SETTER
+    public void setImagePath(String imagePath) { this.imagePath = imagePath; } 
     
     public boolean isAvailable() {
         return "AVAILABLE".equals(status);
